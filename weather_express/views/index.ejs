@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+            <% if(error === null){ %>
                 <h1 id="location"><%= city %></h1>
                 <ul class="list-group mt-3">
                     <li class="list-group-item" id="description"><%= description %></li>
@@ -15,7 +16,12 @@
                     </div>
                     <input type="submit" class="btn btn-grey" value="Save changes">
                 </form>
+            <% } else { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
             </div>
+            <a class="btn btn-secondary text-white" href="/" role="button">Try again</a>
+            <% } %>
         </div>
     </div>
 <%- include('footer'); %>
