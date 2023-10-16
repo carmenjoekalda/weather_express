@@ -1,1 +1,0 @@
-<b>template test</b>
